@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Storyboard 🌍</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Community Storyboard 🌍</h1>
+      <button id="themeSwitcher" class="theme-switcher">🌙 Dark Mode</button>
+    </header>
+
+    <section class="contribution-form">
+      <div class="controls">
+        <div class="contribution-type">
+          <button data-type="all" class="filter-btn active">All</button>
+          <button data-type="text" class="filter-btn">📝 Text</button>
+          <button data-type="image" class="filter-btn">🖼️ Image</button>
+        </div>
+        <button id="clearAll" class="clear-btn">🗑️ Clear All</button>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="userName" placeholder="Your name (optional)" />
+      </div>
+      <div class="form-group" id="textGroup">
+        <textarea id="userInput" placeholder="Share your story or idea..." maxlength="300"></textarea>
+        <small id="charCount">300 characters remaining</small>
+      </div>
+      <div class="form-group image-group" id="imageGroup" style="display:none;">
+        <input type="file" id="imageUpload" accept="image/*" />
+        <img id="imagePreview" alt="Preview" />
+      </div>
+      <button id="shareBtn" class="share-btn" disabled>Share Your Story 🚀</button>
+    </section>
+
+    <main>
+      <section class="story-grid" id="storyboard"></section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root {
+  --primary: #2a9d8f;
+  --secondary: #264653;
+  --accent: #e9c46a;
+  --background: #f8f9fa;
+}
+
+.dark-theme {
+  --primary: #4ecdc4;
+  --secondary: #f8f9fa;
+  --background: #2b2d42;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  transition: background 0.3s;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header h1 { color: var(--primary); }
+.theme-switcher { background: none; border: 2px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; transition: all 0.3s; }
+
+.contribution-form { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
+.controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.filter-btn, .clear-btn { background: none; border: 2px solid var(--primary); color: var(--primary); padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
+.filter-btn.active, .clear-btn:hover { background: var(--primary); color: white; }
+.form-group { margin-bottom: 15px; }
+#userName, #userInput { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 10px; font-size: 1rem; }
+#userInput { resize: vertical; height: 80px; }
+#charCount { display: block; text-align: right; color: #666; font-size: 0.85rem; }
+.image-group input { display: block; }
+#imagePreview { display: block; margin-top: 10px; max-width: 100%; border-radius: 10px; }
+.share-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-size: 1rem; cursor: pointer; transition: transform 0.2s; }
+.share-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.share-btn:hover:not(:disabled) { transform: scale(1.05); }
+
+.story-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px; }
+.contribution-card { background: rgba(255,255,255,0.95); border-radius: 15px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+.dark-theme .contribution-card { background: rgba(40,40,40,0.95); }
+.user-meta { display: flex; align-items: center; margin-bottom: 10px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+.reactions { margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
+.reaction-btn { background: none; border: none; cursor: pointer; font-size: 1.2rem; }
+.reaction-btn:hover { opacity: 0.7; }
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100%) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
